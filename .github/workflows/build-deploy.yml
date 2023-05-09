@@ -26,7 +26,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          permissions:
-            contents: write
           BRANCH: gh-pages
           FOLDER: dist/exp-clinico-gui
