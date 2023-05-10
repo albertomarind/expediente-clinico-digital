@@ -1,21 +1,26 @@
 <div class="px-4 py-5 md:px-6 lg:px-8">
-  <button [routerLink]="['../../']"  pButton pRipple type="button" label="Back to Hospitals" class="bg-white p-button-outlined p-button-secondary"></button>
+  <div class="flex flex justify-content-between align-items-center">
+    <button [routerLink]="['../../']" pButton pRipple type="button" label="Back to Hospitals"
+            class="bg-white p-button-outlined p-button-secondary"></button>
+    <button pButton pRipple type="button" label="Add patient"
+            class="bg-white p-button-outlined p-button-primary"></button>
+  </div>
+
   <p-card class="block mt-4">
     <div class="flex justify-content-between align-items-center">
       <h2>Hospital Ángeles</h2>
-      <button  pButton pRipple type="button" label="Add patient" class="bg-white p-button-outlined p-button-primary"></button>
     </div>
     <p-table class="mt-4 block" [value]="patients" responsiveLayout="stack" [breakpoint]="'960px'"
              [tableStyle]="{'min-width': '20rem'}">
       <ng-template pTemplate="caption">
-        <div class="caption-table flex justify-content-between align-items-center">
-          <div>
-            <h3>Patients</h3>
+        <div class="caption-table block sm:flex justify-content-between align-items-center">
+          <div class="mb-3 sm:mb-0">
+            <h2>Patients</h2>
           </div>
-          <div class="flex">
-            <div class="p-input-icon-left ml-auto">
+          <div>
+            <div class="p-input-icon-left ml-auto w-full">
               <i class="pi pi-search"></i>
-              <input pInputText type="text"
+              <input pInputText type="text" class="w-full"
                      placeholder="Search patient"/>
             </div>
           </div>
@@ -42,7 +47,8 @@
           <td>{{patient.room}}</td>
           <td>{{patient.data}}</td>
           <td>
-            <button [routerLink]="[17]" pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-outlined"></button>
+            <button [routerLink]="[17]" pButton pRipple type="button" icon="pi pi-search"
+                    class="p-button-rounded p-button-outlined"></button>
           </td>
         </tr>
       </ng-template>
