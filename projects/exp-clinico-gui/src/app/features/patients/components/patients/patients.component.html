@@ -25,7 +25,6 @@
             </div>
           </div>
         </div>
-
       </ng-template>
       <ng-template pTemplate="header">
         <tr>
@@ -40,15 +39,35 @@
       </ng-template>
       <ng-template pTemplate="body" let-patient>
         <tr>
-          <td>{{patient.name}}</td>
-          <td>{{patient.birthdate}}</td>
-          <td>{{patient.dato1}}</td>
-          <td>{{patient.history}}</td>
-          <td>{{patient.room}}</td>
-          <td>{{patient.data}}</td>
           <td>
-            <button [routerLink]="[17]" pButton pRipple type="button" icon="pi pi-search"
-                    class="p-button-rounded p-button-outlined"></button>
+            <span class="p-column-title font-bold">Name:</span>
+            <span>{{patient.name}}</span>
+          </td>
+          <td>
+            <span class="p-column-title font-bold">Birthdate:</span>
+            <span> {{patient.birthdate}}</span>
+          </td>
+          <td>
+            <span class="p-column-title font-bold">Data1:</span>
+            <span>{{patient.data1}}</span>
+          </td>
+          <td>
+            <span class="p-column-title font-bold">No. Hist:</span>
+            <span>{{patient.history}}</span>
+          </td>
+          <td>
+            <span class="p-column-title font-bold">Room:</span>
+            <span> {{patient.room}}</span>
+          </td>
+          <td>
+            <span class="p-column-title font-bold">Data2:</span>
+            <span>{{patient.data2}}</span>
+          </td>
+          <td>
+            <div class="flex justify-content-center align-items-center w-full">
+              <button [routerLink]="[17]" pButton pRipple type="button" icon="pi pi-search"
+                      class="p-button-rounded p-button-outlined"></button>
+            </div>
           </td>
         </tr>
       </ng-template>

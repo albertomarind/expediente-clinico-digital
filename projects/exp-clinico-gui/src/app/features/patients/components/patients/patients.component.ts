@@ -13,26 +13,26 @@ export class PatientsComponent implements OnInit {
     {
       name:'Maximiliano Burgos Halton',
       birthdate:'27/07/1999',
-      dato1:'18a',
+      data1:'18a',
       history:'100005986',
       room:'Hab 420',
-      data:'masc'
+      data2:'masc'
     },
     {
       name:'Elena López Gómez',
       birthdate:'28/09/2000',
-      dato1:'18a',
+      data1:'18a',
       history:'100005996',
       room:'Hab 263',
-      data:'masc'
+      data2:'masc'
     },
     {
       name:'Luis Martínez Hernández',
       birthdate:'24/11/1985',
-      dato1:'13a',
+      data1:'13a',
       history:'100005956',
       room:'Hab 325',
-      data:'masc'
+      data2:'masc'
     }
   ];
 
