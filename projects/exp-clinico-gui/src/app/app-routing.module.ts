@@ -14,11 +14,14 @@ const routes: Routes = [
     path: 'private',
     loadChildren: () => import('./layout/private/private.module').then(m => m.PrivateModule)
   },
-  { path: 'patients', loadChildren: () => import('./features/patients/patients.module').then(m => m.PatientsModule) }
+  {path: 'patients', loadChildren: () => import('./features/patients/patients.module').then(m => m.PatientsModule)}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled',
+    useHash: true
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
