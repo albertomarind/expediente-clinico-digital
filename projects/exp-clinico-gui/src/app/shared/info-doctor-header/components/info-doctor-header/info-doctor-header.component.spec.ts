@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InfoDoctorHeaderComponent } from './info-doctor-header.component';
+import { InfoDoctorHeaderComponent } from 'projects/exp-clinico-gui/src/app/shared/info-doctor-header/components/info-doctor-header/info-doctor-header.component';
 
 describe('InfoDoctorHeaderComponent', () => {
   let component: InfoDoctorHeaderComponent;

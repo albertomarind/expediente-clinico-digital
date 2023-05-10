@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrivateHeaderComponent } from './private-header.component';
+import { PublicComponent } from 'projects/exp-clinico-gui/src/app/layout/public/components/public.component';
 
-describe('PrivateHeaderComponent', () => {
-  let component: PrivateHeaderComponent;
-  let fixture: ComponentFixture<PrivateHeaderComponent>;
+describe('PublicComponent', () => {
+  let component: PublicComponent;
+  let fixture: ComponentFixture<PublicComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PrivateHeaderComponent ]
+      declarations: [ PublicComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PrivateHeaderComponent);
+    fixture = TestBed.createComponent(PublicComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
