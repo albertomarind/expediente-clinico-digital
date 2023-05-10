@@ -13,7 +13,8 @@ const routes: Routes = [
   {
     path: 'private',
     loadChildren: () => import('./layout/private/private.module').then(m => m.PrivateModule)
-  }
+  },
+  { path: 'patients', loadChildren: () => import('./features/patients/patients.module').then(m => m.PatientsModule) }
 ];
 
 @NgModule({

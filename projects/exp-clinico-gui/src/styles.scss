@@ -2,6 +2,7 @@
 :root {
   --color-primary: #266AEA;
   --app-max-width: 1440px;
+ // --maskbg: rgba(0, 0, 0, 0);
 
   @media screen and (min-width: 1440px) {
     --app-max-width: 1600px;
@@ -31,10 +32,6 @@ body {
   background-color: #EFF3F8;
 }
 
-.primary-color {
-  color: var(--primary-color);
-}
-
 .app-container {
   width: 100%;
   max-width: var(--app-max-width);
@@ -46,3 +43,4 @@ img {
   max-width: 100%;
   height: auto;
 }
+

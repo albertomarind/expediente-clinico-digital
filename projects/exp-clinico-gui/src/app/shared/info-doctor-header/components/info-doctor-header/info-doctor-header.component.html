@@ -2,17 +2,14 @@
   <div class="flex align-items-center">
     <app-sidebar-profile-doctor></app-sidebar-profile-doctor>
     <div class="flex flex-column">
-      <h2 class="primary-color">Dr. Shehin de Silva</h2>
-      <p class="font-semibold text-sm mt-1">Servicio de torre de consultorios Universidad / 3000-01</p>
+      <h2 class="text-primary text-sm md:text-xl">Dr. Shehin de Silva</h2>
     </div>
   </div>
-  <div class="flex align-items-center justify-content-center flex-column">
-    <span class="font-bold primary-color text-base">Consultas</span>
-    <span class="font-bold text-sm">5 - Agosto - 2022</span>
-  </div>
-  <div class="flex align-items-center justify-content-end gap-4">
-    <i class="pi pi-question-circle text-2xl primary-color"></i>
-    <img src="assets/images/common-ech.svg" alt="logo common ech" height="42" width="85">
-    <img src="assets/images/hospital-angeles.png" alt="logo hospital angeles" height="54" width="84">
+  <div class="flex align-items-center justify-content-end gap-4 mr-2">
+    <div class="flex flex-wrap gap-2 icons">
+      <i class="pi pi-bell mr-4 p-text-secondary text-2xl" pBadge value="2"></i>
+      <i class="pi pi-envelope mr-4  p-text-secondary text-2xl" pBadge [value]="'9+'" severity="danger"></i>
+      <i class="pi pi-calendar mr-4 p-text-secondary text-2xl" ></i>
+    </div>
   </div>
 </div>

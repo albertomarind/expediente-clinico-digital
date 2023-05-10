@@ -7,7 +7,7 @@ const routes: Routes = [
     path: '', component: PrivateComponent, children: [
       {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'hospitals',
         pathMatch: 'full'
       },
       {
