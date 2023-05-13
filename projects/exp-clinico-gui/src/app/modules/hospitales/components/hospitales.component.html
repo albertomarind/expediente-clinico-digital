@@ -1,0 +1,38 @@
+<div class=" px-4 py-5 md:px-6 lg:px-8 hospitales">
+  <p-breadcrumb styleClass="bg-transparent font-bold border-none p-0" class="block mb-4" [model]="items"></p-breadcrumb>
+  <div class="grid">
+    <div class="col-12 md:col-6 lg:col-3">
+      <div class="surface-card shadow-2 p-3 border-round cursor-pointer" [routerLink]="[5,'pacientes']">
+        <div class="flex justify-content-between mb-3">
+          <div>
+            <div class="text-900 font-medium text-xl">Hospital Ángeles Roma</div>
+          </div>
+        </div>
+        <span class="text-green-500 font-medium">1 </span>
+        <span class="text-500">Paciente</span>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <div class="surface-card shadow-2 p-3 border-round cursor-pointer"  [routerLink]="[5,'pacientes']">
+        <div class="flex justify-content-between mb-3">
+          <div>
+            <div class="text-900 font-medium text-xl">Hospital Ángeles Universidad</div>
+          </div>
+        </div>
+        <span class="text-green-500 font-medium">4 </span>
+        <span class="text-500">Pacientes</span>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <div class="surface-card shadow-2 p-3 border-round cursor-pointer"  [routerLink]="[5,'pacientes']">
+        <div class="flex justify-content-between mb-3">
+          <div>
+            <div class="text-900 font-medium text-xl">Hospital Ángeles Lindavista</div>
+          </div>
+        </div>
+        <span class="text-green-500 font-medium">5 </span>
+        <span class="text-500">Pacientes</span>
+      </div>
+    </div>
+  </div>
+</div>

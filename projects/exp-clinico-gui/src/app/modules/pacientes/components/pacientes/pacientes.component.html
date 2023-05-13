@@ -1,0 +1,69 @@
+<div class="px-4 py-5 md:px-6 lg:px-8">
+  <p-breadcrumb styleClass="bg-transparent font-bold border-none p-0" class="block mb-4" [model]="items"></p-breadcrumb>
+  <div class="flex flex justify-content-between align-items-center">
+    <p-button label="Regresar" styleClass="p-button-sm p-button-secondary mr-2" [routerLink]="['../../']"></p-button>
+    <p-button label="Agregar paciente" styleClass="p-button-sm"></p-button>
+  </div>
+
+  <p-panel class="block mt-4" header="Pacientes">
+    <p-table class="mt-2 block" [value]="patients" responsiveLayout="stack" [breakpoint]="'960px'"
+             [tableStyle]="{'min-width': '20rem'}">
+      <ng-template pTemplate="caption">
+        <div class="caption-table block sm:flex justify-content-between align-items-center">
+          <div class="p-input-icon-left mr-auto ">
+            <i class="pi pi-search"></i>
+            <input pInputText type="text" class="w-full"
+                   placeholder="Buscar"/>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Nombre</th>
+          <th>Fecha nacimiento</th>
+          <th>Edad</th>
+          <th>No. Historia</th>
+          <th>Habitación</th>
+          <th>Género</th>
+          <th>Acciones</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-patient>
+        <tr>
+          <td>
+            <span class="p-column-title font-bold">Nombre:</span>
+            <span>{{patient.name}}</span>
+          </td>
+          <td>
+            <span class="p-column-title font-bold">Fecha nacimiento:</span>
+            <span> {{patient.birthdate}}</span>
+          </td>
+          <td>
+            <span class="p-column-title font-bold">Edad:</span>
+            <span>{{patient.age}}</span>
+          </td>
+          <td>
+            <span class="p-column-title font-bold">No. Historia:</span>
+            <span>{{patient.history}}</span>
+          </td>
+          <td>
+            <span class="p-column-title font-bold">Habitación:</span>
+            <span> {{patient.room}}</span>
+          </td>
+          <td>
+            <span class="p-column-title font-bold">Género:</span>
+            <span>{{patient.gender}}</span>
+          </td>
+          <td>
+            <div class="flex justify-content-center align-items-center w-full">
+              <button [routerLink]="[17,'resumen']" pButton pRipple type="button" icon="pi pi-search"
+                      class="p-button-rounded p-button-outlined"></button>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-panel>
+
+
+</div>

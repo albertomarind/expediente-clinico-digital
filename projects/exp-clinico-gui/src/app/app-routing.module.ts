@@ -4,24 +4,22 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./layout/public/public.module').then(m => m.PublicModule)
+    loadChildren: () => import('./pages/public/public.module').then(m => m.PublicModule)
   },
   {
     path: 'public',
-    loadChildren: () => import('./layout/public/public.module').then(m => m.PublicModule)
+    loadChildren: () => import('./pages/public/public.module').then(m => m.PublicModule)
   },
   {
     path: 'private',
-    loadChildren: () => import('./layout/private/private.module').then(m => m.PrivateModule)
-  },
+    loadChildren: () => import('./pages/private/private.module').then(m => m.PrivateModule)
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     scrollPositionRestoration: 'enabled',
-    useHash: true,
-    paramsInheritanceStrategy: 'always',
-    relativeLinkResolution: 'corrected',
+    useHash: true
   })],
   exports: [RouterModule]
 })

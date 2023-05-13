@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+.factores-riesgo {
+  &__header {
+    background-color: #F7F7F7;
+    border: 1px solid #cecece;
+  }
+}
+
+.resumen {
+  display: grid;
+  grid-template-columns:280px auto;
+
+  .buscador {
+    .input {
+      background-color: #266AEA;
+
+      input {
+        border-radius: 40.64px;
+      }
+    }
+  }
+}

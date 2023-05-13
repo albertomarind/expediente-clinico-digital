@@ -1,0 +1,49 @@
+.info-doctor{
+  //position: fixed;
+  //height: 5rem;
+  //z-index: 997;
+  //left: 0;
+  //top: 0;
+  //width: 100%;
+  height: var(--app-header-height);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  background-color: var(--surface-card);
+  box-shadow: 0 3px 5px #00000005, 0 0 2px #0000000d, 0 1px 4px #00000014;
+  @media screen and (min-width: 1px) {
+    grid-template-columns: 1fr .6fr;
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 1600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 1900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+.logos{
+  .common{
+    @media screen and (max-width: 576px) {
+      transform: scale(.75) translateX(20%);
+    }
+  }
+  .hospital{
+    @media screen and (max-width: 576px) {
+      transform: scale(.75) ;
+    }
+  }
+
+}
+
+:host ::ng-deep .p-overlay-badge .p-badge {
+  transform: translate(50%,-50%) scale(.8);
+}
