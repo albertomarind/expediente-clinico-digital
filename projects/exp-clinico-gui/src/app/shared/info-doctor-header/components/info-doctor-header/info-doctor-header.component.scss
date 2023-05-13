@@ -30,6 +30,20 @@
 
 }
 
+.logos{
+  .common{
+    @media screen and (max-width: 576px) {
+      transform: scale(.75) translateX(20%);
+    }
+  }
+  .hospital{
+    @media screen and (max-width: 576px) {
+      transform: scale(.75) ;
+    }
+  }
+
+}
+
 :host ::ng-deep .p-overlay-badge .p-badge {
   transform: translate(50%,-50%) scale(.8);
 }
