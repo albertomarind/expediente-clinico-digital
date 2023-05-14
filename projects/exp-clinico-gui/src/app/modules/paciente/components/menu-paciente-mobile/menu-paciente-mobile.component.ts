@@ -13,7 +13,6 @@ export class MenuPacienteMobileComponent implements OnInit {
   constructor() {
   }
 
-
   ngOnInit() {
     this.items = [
       {

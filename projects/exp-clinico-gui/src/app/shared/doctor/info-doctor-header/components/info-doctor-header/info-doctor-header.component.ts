@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-info-doctor-header',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoDoctorHeaderComponent implements OnInit {
 
-  constructor() { }
+  display: boolean = false;
+
+  constructor(private router:Router) {
+  }
 
   ngOnInit(): void {
+  }
+
+  closeSession(){
+    this.router.navigate(['/']);
   }
 
 }

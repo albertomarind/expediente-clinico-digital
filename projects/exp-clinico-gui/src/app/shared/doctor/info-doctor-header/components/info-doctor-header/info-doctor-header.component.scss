@@ -44,6 +44,11 @@
 
 }
 
+:host ::ng-deep .p-sidebar-content {
+  height: 100%;
+}
+
+
 :host ::ng-deep .p-overlay-badge .p-badge {
   transform: translate(50%,-50%) scale(.8);
 }
