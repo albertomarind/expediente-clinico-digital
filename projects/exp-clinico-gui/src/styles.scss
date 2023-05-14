@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
 :root {
-  --app-header-height:72px;
+  --app-header-height: 72px;
   --app-max-width: 1440px;
- // --maskbg: rgba(0, 0, 0, 0);
+  // --maskbg: rgba(0, 0, 0, 0);
 
   @media screen and (min-width: 1440px) {
     --app-max-width: 1600px;
@@ -44,3 +45,21 @@ img {
   height: auto;
 }
 
+.p-calendar {
+  .p-inputtext {
+    padding: 0.55rem 0.75rem;
+  }
+
+  .p-inputtext + .p-button.p-button-icon-only {
+    padding: 0.55rem 0;
+  }
+}
+
+.req {
+  &::before {
+    content: '*';
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size:16px;
+  }
+}

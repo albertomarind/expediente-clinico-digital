@@ -15,9 +15,8 @@ import { PacienteRoutingModule } from 'projects/exp-clinico-gui/src/app/modules/
 import { PacienteComponent } from 'projects/exp-clinico-gui/src/app/modules/paciente/components/paciente/paciente.component';
 import { ResumenComponent } from './components/resumen/resumen.component';
 import { FactoresRiesgoComponent } from './components/factores-riesgo/factores-riesgo.component';
-import { NotaEvaluacionComponent } from './components/nota-evaluacion/nota-evaluacion.component';
+import { NotaEvolucionComponent } from 'projects/exp-clinico-gui/src/app/modules/paciente/components/nota-evolucion/nota-evolucion.component';
 import { MenuPacienteMobileComponent } from './components/menu-paciente-mobile/menu-paciente-mobile.component';
-
 
 @NgModule({
   declarations: [
@@ -26,7 +25,7 @@ import { MenuPacienteMobileComponent } from './components/menu-paciente-mobile/m
     MenuPacienteComponent,
     ResumenComponent,
     FactoresRiesgoComponent,
-    NotaEvaluacionComponent,
+    NotaEvolucionComponent,
     PacienteDetallesComponent,
     MenuPacienteMobileComponent
   ],

@@ -17,9 +17,17 @@ export class MenuPacienteMobileComponent implements OnInit {
     this.items = [
       {
         label: 'Resumen',
+        routerLink: ["resumen"],
+        command: () => {
+          this.display = false;
+        }
       },
       {
-        label: 'Notas de evaluación',
+        label: 'Notas de evolución',
+        routerLink: ["nota-evolucion"],
+        command: () => {
+          this.display = false;
+        }
       },
       {
         label: 'Historia Clínica'
