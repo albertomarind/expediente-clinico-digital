@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AvatarModule } from "primeng/avatar";
 import { BreadcrumbModule } from "primeng/breadcrumb";
 import { ButtonModule } from "primeng/button";
 import { InputTextModule } from "primeng/inputtext";
 import { PanelModule } from "primeng/panel";
+import { PanelMenuModule } from "primeng/panelmenu";
 import { RippleModule } from "primeng/ripple";
+import { SidebarModule } from "primeng/sidebar";
 import { InfoPacienteHeaderComponent } from "projects/exp-clinico-gui/src/app/modules/paciente/components/info-paciente-header/info-paciente-header.component";
 import { MenuPacienteComponent } from "projects/exp-clinico-gui/src/app/modules/paciente/components/menu-paciente/menu-paciente.component";
 import { PacienteDetallesComponent } from "projects/exp-clinico-gui/src/app/modules/paciente/components/paciente-detalles/paciente-detalles.component";
@@ -13,6 +16,7 @@ import { PacienteComponent } from 'projects/exp-clinico-gui/src/app/modules/paci
 import { ResumenComponent } from './components/resumen/resumen.component';
 import { FactoresRiesgoComponent } from './components/factores-riesgo/factores-riesgo.component';
 import { NotaEvaluacionComponent } from './components/nota-evaluacion/nota-evaluacion.component';
+import { MenuPacienteMobileComponent } from './components/menu-paciente-mobile/menu-paciente-mobile.component';
 
 
 @NgModule({
@@ -23,7 +27,8 @@ import { NotaEvaluacionComponent } from './components/nota-evaluacion/nota-evalu
     ResumenComponent,
     FactoresRiesgoComponent,
     NotaEvaluacionComponent,
-    PacienteDetallesComponent
+    PacienteDetallesComponent,
+    MenuPacienteMobileComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +37,10 @@ import { NotaEvaluacionComponent } from './components/nota-evaluacion/nota-evalu
     RippleModule,
     InputTextModule,
     PanelModule,
-    BreadcrumbModule
+    BreadcrumbModule,
+    SidebarModule,
+    AvatarModule,
+    PanelMenuModule
   ]
 })
 export class PacienteModule {

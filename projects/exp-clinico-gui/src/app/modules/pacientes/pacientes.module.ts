@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AvatarModule } from "primeng/avatar";
 import { ButtonModule } from "primeng/button";
 import { CardModule } from "primeng/card";
 import { InputTextModule } from "primeng/inputtext";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { PanelModule } from "primeng/panel";
 import { RippleModule } from "primeng/ripple";
+import { SidebarModule } from "primeng/sidebar";
 import { TableModule } from "primeng/table";
 import { PacientesRoutingModule } from 'projects/exp-clinico-gui/src/app/modules/pacientes/pacientes-routing.module';
 import { PacientesComponent } from 'projects/exp-clinico-gui/src/app/modules/pacientes/components/pacientes/pacientes.component';

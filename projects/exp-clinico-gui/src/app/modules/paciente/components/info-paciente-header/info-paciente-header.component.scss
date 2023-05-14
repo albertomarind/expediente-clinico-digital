@@ -3,11 +3,3 @@
   background-color: #EFF4FF;
 }
 
-.grid-patient{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items: center;
-  .buttons-section{
-    justify-self:right;
-  }
-}
