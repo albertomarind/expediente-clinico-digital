@@ -28,6 +28,8 @@ import { TieredMenuModule } from 'primeng/tieredmenu';
 import { NuevaMedicacionComponent } from './components/nueva-medicacion/nueva-medicacion.component';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { PickListModule } from 'primeng/picklist';
+import { PruebasDiagnosticasComponent } from './components/pruebas-diagnosticas/pruebas-diagnosticas.component';
+import { VerPeticionComponent } from './components/ver-peticion/ver-peticion.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { PickListModule } from 'primeng/picklist';
     PacienteDetallesComponent,
     MenuPacienteMobileComponent,
     MedicacionComponent,
-    NuevaMedicacionComponent
+    NuevaMedicacionComponent,
+    PruebasDiagnosticasComponent,
+    VerPeticionComponent
   ],
   imports: [
     CommonModule,
