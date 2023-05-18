@@ -1,9 +1,0 @@
-:host {
-  display: block;
-  height: 100%;
-}
-
-main {
-  //padding: 7rem 2rem 2rem 2rem;
-  height: calc(100% - var(--app-header-height));
-}
