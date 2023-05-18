@@ -6,7 +6,7 @@ on:
       - master
   workflow_dispatch:
     branches:
-      -master
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
