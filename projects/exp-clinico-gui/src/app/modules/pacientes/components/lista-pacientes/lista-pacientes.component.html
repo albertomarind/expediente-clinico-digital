@@ -1,5 +1,6 @@
 <div class="p-3">
-  <p-breadcrumb styleClass="bg-transparent border-none p-0 text-xs lg:text-base" class="block mb-4" [model]="items"></p-breadcrumb>
+  <p-breadcrumb styleClass="bg-transparent border-none p-0 text-xs lg:text-base" class="block mb-4"
+                [model]="items"></p-breadcrumb>
   <div class="flex flex justify-content-between align-items-center">
     <p-button label="Regresar" styleClass="p-button-sm p-button-secondary mr-2" [routerLink]="['../../']"></p-button>
     <p-button label="Crear paciente" styleClass="p-button-sm" [routerLink]="['crear-paciente']"></p-button>
@@ -31,28 +32,40 @@
       <ng-template pTemplate="body" let-patient>
         <tr>
           <td>
-            <span class="p-column-title font-bold">Nombre:</span>
-            <span>{{patient.name}}</span>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Nombre:</span>
+              <span>{{patient.name}}</span>
+            </div>
           </td>
           <td>
-            <span class="p-column-title font-bold">Fecha nacimiento:</span>
-            <span> {{patient.birthdate}}</span>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Fecha nacimiento:</span>
+              <span> {{patient.birthdate}}</span>
+            </div>
           </td>
           <td>
-            <span class="p-column-title font-bold">Edad:</span>
-            <span>{{patient.age}}</span>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Edad:</span>
+              <span>{{patient.age}}</span>
+            </div>
           </td>
           <td>
-            <span class="p-column-title font-bold">No. Historia:</span>
-            <span>{{patient.history}}</span>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">No. Historia:</span>
+              <span>{{patient.history}}</span>
+            </div>
           </td>
           <td>
-            <span class="p-column-title font-bold">Habitación:</span>
-            <span> {{patient.room}}</span>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Habitación:</span>
+              <span> {{patient.room}}</span>
+            </div>
           </td>
           <td>
-            <span class="p-column-title font-bold">Género:</span>
-            <span>{{patient.gender}}</span>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Género:</span>
+              <span>{{patient.gender}}</span>
+            </div>
           </td>
           <td>
             <div class="flex justify-content-center align-items-center w-full">
