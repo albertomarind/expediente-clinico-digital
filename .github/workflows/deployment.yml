@@ -1,4 +1,4 @@
-name: Custom Deployment
+name: Deploy Master Branch
 
 on:
   push:
