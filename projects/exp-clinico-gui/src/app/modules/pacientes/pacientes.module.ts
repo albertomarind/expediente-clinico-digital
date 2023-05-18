@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AvatarModule } from "primeng/avatar";
+import { AccordionModule } from "primeng/accordion";
 import { ButtonModule } from "primeng/button";
 import { CalendarModule } from "primeng/calendar";
 import { CardModule } from "primeng/card";
@@ -9,7 +9,6 @@ import { InputTextModule } from "primeng/inputtext";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { PanelModule } from "primeng/panel";
 import { RippleModule } from "primeng/ripple";
-import { SidebarModule } from "primeng/sidebar";
 import { TableModule } from "primeng/table";
 import { CrearPacienteComponent } from "projects/exp-clinico-gui/src/app/modules/pacientes/components/crear-paciente/crear-paciente.component";
 import { PacientesRoutingModule } from 'projects/exp-clinico-gui/src/app/modules/pacientes/pacientes-routing.module';
@@ -35,7 +34,8 @@ import { ListaPacientesComponent } from './components/lista-pacientes/lista-paci
     InputTextareaModule,
     BreadcrumbModule,
     CalendarModule,
-    DropdownModule
+    DropdownModule,
+    AccordionModule
   ]
 })
 export class PacientesModule { }

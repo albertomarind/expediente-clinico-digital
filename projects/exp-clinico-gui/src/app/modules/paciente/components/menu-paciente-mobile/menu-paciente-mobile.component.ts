@@ -30,6 +30,13 @@ export class MenuPacienteMobileComponent implements OnInit {
         }
       },
       {
+        label: 'Medicación',
+        routerLink: ["medicacion"],
+        command: () => {
+          this.display = false;
+        }
+      },
+      {
         label: 'Historia Clínica'
       },
       {
