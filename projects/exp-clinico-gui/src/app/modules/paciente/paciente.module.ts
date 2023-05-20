@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from "@angular/forms";
 import { AvatarModule } from "primeng/avatar";
 import { BreadcrumbModule } from "primeng/breadcrumb";
 import { ButtonModule } from "primeng/button";
 import { CalendarModule } from "primeng/calendar";
 import { CheckboxModule } from "primeng/checkbox";
+import { ChipModule } from "primeng/chip";
 import { DialogModule } from "primeng/dialog";
 import { DropdownModule } from "primeng/dropdown";
 import { InputTextModule } from "primeng/inputtext";
 import { PanelModule } from "primeng/panel";
 import { PanelMenuModule } from "primeng/panelmenu";
+import { RadioButtonModule } from "primeng/radiobutton";
 import { RippleModule } from "primeng/ripple";
 import { SidebarModule } from "primeng/sidebar";
 import { TableModule } from "primeng/table";
@@ -30,6 +33,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { PickListModule } from 'primeng/picklist';
 import { PruebasDiagnosticasComponent } from './components/pruebas-diagnosticas/pruebas-diagnosticas.component';
 import { VerPeticionComponent } from './components/ver-peticion/ver-peticion.component';
+import { LaboratorioComponent } from 'projects/exp-clinico-gui/src/app/modules/paciente/components/laboratorio/laboratorio.component';
+import { ImagenComponent } from './components/imagen/imagen.component';
 
 @NgModule({
   declarations: [
@@ -44,12 +49,15 @@ import { VerPeticionComponent } from './components/ver-peticion/ver-peticion.com
     MedicacionComponent,
     NuevaMedicacionComponent,
     PruebasDiagnosticasComponent,
-    VerPeticionComponent
+    VerPeticionComponent,
+    LaboratorioComponent,
+    ImagenComponent
   ],
   imports: [
     CommonModule,
     ButtonModule,
     PacienteRoutingModule,
+    FormsModule,
     RippleModule,
     InputTextModule,
     PanelModule,
@@ -65,7 +73,9 @@ import { VerPeticionComponent } from './components/ver-peticion/ver-peticion.com
     PickListModule,
     DropdownModule,
     CalendarModule,
-    CheckboxModule
+    CheckboxModule,
+    RadioButtonModule,
+    ChipModule
   ]
 })
 export class PacienteModule {

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ImagenComponent } from "projects/exp-clinico-gui/src/app/modules/paciente/components/imagen/imagen.component";
+import { LaboratorioComponent } from "projects/exp-clinico-gui/src/app/modules/paciente/components/laboratorio/laboratorio.component";
 import { MedicacionComponent } from "projects/exp-clinico-gui/src/app/modules/paciente/components/medicacion/medicacion.component";
 import { NuevaMedicacionComponent } from "projects/exp-clinico-gui/src/app/modules/paciente/components/nueva-medicacion/nueva-medicacion.component";
 import { PruebasDiagnosticasComponent } from "projects/exp-clinico-gui/src/app/modules/paciente/components/pruebas-diagnosticas/pruebas-diagnosticas.component";
@@ -32,6 +34,12 @@ const routes: Routes = [
       },
       {
         path: 'pruebas-diagnosticas', component: PruebasDiagnosticasComponent
+      },
+      {
+        path: 'laboratorio', component: LaboratorioComponent
+      },
+      {
+        path: 'imagen', component: ImagenComponent
       },
       {
         path: 'ver-peticion', component: VerPeticionComponent
