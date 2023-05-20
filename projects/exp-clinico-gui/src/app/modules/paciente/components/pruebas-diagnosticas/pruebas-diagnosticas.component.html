@@ -3,7 +3,7 @@
     <p-button label="Imagen" styleClass="p-button-sm mr-2" [routerLink]="['../imagen']"></p-button>
     <p-button label="Laboratorio" styleClass="p-button-sm" [routerLink]="['../laboratorio']"></p-button>
   </div>
-  <p-panel class="block mt-4" header="Pruebas">
+  <p-panel class="block mt-4" header="Pruebas diagnósticas">
     <p-table class="mt-2 block" [value]="pruebas" responsiveLayout="stack" [breakpoint]="'960px'"
              [tableStyle]="{'min-width': '10rem'}">
       <ng-template pTemplate="caption">
@@ -51,7 +51,7 @@
           <td>
             <div class="flex flex-column">
               <span class="p-column-title font-bold lg:hidden">Ver petición:</span>
-              <p-button icon="pi pi-book" [routerLink]="['../ver-peticion']"
+              <p-button icon="pi pi-book"
                         styleClass="p-button-sm {{prueba.verPeticion?'p-button-warning':''}}"></p-button>
             </div>
           </td>
