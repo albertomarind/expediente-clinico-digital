@@ -32,7 +32,6 @@ import { NuevaMedicacionComponent } from './components/nueva-medicacion/nueva-me
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { PickListModule } from 'primeng/picklist';
 import { PruebasDiagnosticasComponent } from './components/pruebas-diagnosticas/pruebas-diagnosticas.component';
-import { VerPeticionComponent } from './components/ver-peticion/ver-peticion.component';
 import { LaboratorioComponent } from 'projects/exp-clinico-gui/src/app/modules/paciente/components/laboratorio/laboratorio.component';
 import { ImagenComponent } from './components/imagen/imagen.component';
 
@@ -49,7 +48,6 @@ import { ImagenComponent } from './components/imagen/imagen.component';
     MedicacionComponent,
     NuevaMedicacionComponent,
     PruebasDiagnosticasComponent,
-    VerPeticionComponent,
     LaboratorioComponent,
     ImagenComponent
   ],
