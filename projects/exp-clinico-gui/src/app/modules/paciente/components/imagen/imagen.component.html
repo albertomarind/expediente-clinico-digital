@@ -129,6 +129,17 @@
         </div>
       </div>
     </div>
+    <h3 class="text-primary text-center mt-3">Preguntas de seguridad</h3>
+    <div class="formgrid grid mt-2">
+      <div class="field col-12 lg:col-3 lg:col-offset-4">
+        <label class="font-bold text-sm req block">¿Puede usted estar embarazada?</label>
+        <p-radioButton name="groupname" value="si" label="Sí" [(ngModel)]="value3"></p-radioButton>
+        <p-radioButton name="groupname" value="no" label="No" [(ngModel)]="value3"
+                       class="inline-block ml-3"></p-radioButton>
+      </div>
+    </div>
+
+
     <div class="formgrid grid mt-2">
       <div class="field col-12 lg:col-3">
         <label class="font-bold text-sm">Perfiles:</label>
