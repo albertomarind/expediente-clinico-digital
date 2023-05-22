@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ImagenComponent implements OnInit {
   value: string = 'prioridad';
   value2:string = 'hospitalizacion';
+  value3:string = 'no';
   seleccionMovilidad:any;
   selectedDoctor:any;
   doctors = [
