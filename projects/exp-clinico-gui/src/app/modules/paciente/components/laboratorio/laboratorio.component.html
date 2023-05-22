@@ -1,0 +1,148 @@
+<div class="p-3">
+
+  <div class="flex justify-content-between align-items-center">
+    <p-button label="Cancelar" styleClass="p-button-sm p-button-secondary" [routerLink]="['../pruebas-diagnosticas']"></p-button>
+    <h2 class="text-xl text-primary font-bold text-center">Petición de laboratorio</h2>
+    <span></span>
+  </div>
+
+  <p-panel class="block mt-3" header="Datos personales">
+    <div class="grid">
+      <div class="col-12 lg:col-3">
+        <span class="font-bold text-base block">Nombre:</span>
+        <span class="text-base block">Mariana Barcenas Gutierrez</span>
+      </div>
+      <div class=" col-12 lg:col-2">
+        <span class="font-bold text-base block">Fecha nacimiento - Edad:</span>
+        <span class="text-base block">29/04/2001 - 22 Años</span>
+      </div>
+      <div class=" col-12 lg:col-2">
+        <span class="font-bold text-base block">No. Historia:</span>
+        <span class="text-base block">10900009499</span>
+      </div>
+      <div class=" col-12 lg:col-3">
+        <span class="font-bold text-base block">No. Episodio:</span>
+        <span class="text-base block">109000096548</span>
+      </div>
+      <div class=" col-12 lg:col-2">
+        <span class="font-bold text-base block">Cama:</span>
+        <span class="text-base block">201 / 27d</span>
+      </div>
+    </div>
+  </p-panel>
+
+  <p-panel class="block mt-3" header="Datos petición">
+    <div class="grid">
+      <div class=" col-12 lg:col-3">
+        <span class="font-bold text-base block">Fecha y hora de la petición:</span>
+        <span class="text-base block">17/05/2023 19:17</span>
+      </div>
+      <div class="col-12 lg:col-3">
+        <span class="font-bold text-base block">Número de peticion:</span>
+        <span class="text-base block"></span>
+      </div>
+      <div class="col-12 lg:col-3">
+        <span class="font-bold text-base block">UO solicitante:</span>
+        <span class="text-base block">U.M. Gastroenterología</span>
+      </div>
+      <div class="col-12 lg:col-3">
+        <span class="font-bold text-base block">Solicitante:</span>
+        <span class="text-base block">Dr. Juan Escamilla W.</span>
+      </div>
+    </div>
+    <div class="formgrid grid mt-2">
+      <div class="field col-12 lg:col-3">
+        <label class="font-bold text-sm">Fecha y hora de la muestra:</label>
+        <p-calendar styleClass="w-full" [showIcon]="true" [showTime]="true" [readonlyInput]="true"></p-calendar>
+      </div>
+      <div class="field col-12 lg:col-3">
+        <label class="font-bold text-sm">Doctor responsable:</label>
+        <p-dropdown [options]="doctors" [(ngModel)]="selectedDoctor" optionLabel="name" [filter]="true" filterBy="name"
+                    [showClear]="true" placeholder="Seleccionar" styleClass="w-full p-inputtext-sm">
+          <ng-template pTemplate="selectedItem">
+            <div *ngIf="selectedDoctor">
+              <span>{{selectedDoctor.name}}</span>
+            </div>
+          </ng-template>
+          <ng-template let-doctor pTemplate="item">
+            <div>
+              <span>{{doctor.name}}</span>
+            </div>
+          </ng-template>
+        </p-dropdown>
+      </div>
+      <div class="field col-12 lg:col-3">
+        <label class="font-bold text-sm block">Prioridad:</label>
+        <p-radioButton name="groupname" value="prioridad" label="Prioridad" [(ngModel)]="value"></p-radioButton>
+        <p-radioButton name="groupname" value="urgente" label="Urgente" [(ngModel)]="value"
+                       class="inline-block ml-3"></p-radioButton>
+      </div>
+    </div>
+    <div class="formgrid grid mt-2">
+      <div class="field col-12 lg:col-3">
+        <label class="font-bold text-sm">Movilidad:</label>
+        <p-dropdown placeholder="Seleccionar" [(ngModel)]="seleccionMovilidad"
+                    [options]="[ {name: 'Dato1', code: 'MX'},{name: 'Dato2', code: 'SP'},]"
+                    styleClass="w-full p-inputtext-sm"
+                    optionLabel="name"></p-dropdown>
+      </div>
+      <div class="field col-12 lg:col-9">
+        <label class="font-bold text-sm">Diagnóstico:</label>
+        <div class="border-1 border-black-alpha-10 p-2">
+          <p-chip label="Trastorno de ansiedad orgánico" class="inline-block m-1" [removable]="true"></p-chip>
+          <p-chip label="Fiebre tifoidea" [removable]="true" class="inline-block m-1"></p-chip>
+          <p-chip label="Cólera debido a vidrio" [removable]="true" class="inline-block m-1"></p-chip>
+        </div>
+      </div>
+    </div>
+    <div class="formgrid grid mt-2">
+      <div class="field col-12 lg:col-4">
+        <label class="font-bold text-sm">Riesgos/Alergias:</label>
+        <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+      </div>
+      <div class="field col-12 lg:col-4">
+        <label class="font-bold text-sm">Motivo:</label>
+        <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+      </div>
+      <div class="field col-12 lg:col-4">
+        <label class="font-bold text-sm">Información adicional:</label>
+        <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+      </div>
+    </div>
+    <div class="formgrid grid mt-2">
+      <div class="field col-12 lg:col-3">
+        <label class="font-bold text-sm">Perfiles:</label>
+        <p-dropdown placeholder="Seleccionar"
+                    [options]="[ {name: 'Dato1', code: 'MX'},{name: 'Dato2', code: 'SP'},]"
+                    styleClass="w-full p-inputtext-sm"
+                    optionLabel="name"></p-dropdown>
+      </div>
+    </div>
+    <div class="grid mb-2 lg:mb-0">
+      <div class="col-12 lg:col-6 flex">
+        <input type="text" pInputText placeholder="Search" class="p-inputtext-sm flex-grow-1">
+        <p-button label="Buscar analíticas" class="inline-block lg:ml-4 lg:mr-5" styleClass="p-button-sm"></p-button>
+      </div>
+    </div>
+    <p-pickList [source]="sourceItems" [target]="targetItems" sourceHeader="Analíticas frecuentes"
+                targetHeader="Elementos seleccionados"
+                [dragdrop]="true"
+                [responsive]="true" [sourceStyle]="{'height':'30rem','padding':0}" [targetStyle]="{'height':'30rem'}"
+                filterBy="name" [showSourceControls]="false" [showTargetControls]="false" [showSourceFilter]="false"
+                [showTargetFilter]="false">
+      <ng-template let-item pTemplate="item">
+        <div class="item border-1 border-black-alpha-10 p-3">
+          <span class="lg:ml-1 text-base block lg:inline-block">{{item.nombre}}</span>
+        </div>
+      </ng-template>
+    </p-pickList>
+
+  </p-panel>
+  <div class="mt-3 text-center">
+    <p-button label="Cancelar" class="m-2 inline-block " styleClass="p-button-sm p-button-secondary" [routerLink]="['../pruebas-diagnosticas']"></p-button>
+    <p-button label="Salvar como borrador" class="m-2 inline-block " styleClass="p-button-sm p-button-primary "></p-button>
+    <p-button label="Firmar y firmar"  class="m-2 inline-block " styleClass="p-button-sm p-button-primary "></p-button>
+    <p-button label="Firmar e imprimir"  class="m-2 inline-block " styleClass="p-button-sm p-button-primary "></p-button>
+  </div>
+</div>
+

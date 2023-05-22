@@ -1,0 +1,90 @@
+<div class="p-3">
+  <div class="flex flex justify-content-end align-items-center">
+    <p-button label="Imagen" styleClass="p-button-sm mr-2" [routerLink]="['../imagen']"></p-button>
+    <p-button label="Laboratorio" styleClass="p-button-sm" [routerLink]="['../laboratorio']"></p-button>
+  </div>
+  <p-panel class="block mt-4" header="Pruebas diagnósticas">
+    <p-table class="mt-2 block" [value]="pruebas" responsiveLayout="stack" [breakpoint]="'960px'"
+             [tableStyle]="{'min-width': '10rem'}">
+      <ng-template pTemplate="caption">
+        <div class="caption-table block sm:flex justify-content-between align-items-center">
+          <div class="p-input-icon-left mr-auto ">
+            <i class="pi pi-search"></i>
+            <input pInputText type="text" class="w-full"
+                   placeholder="Buscar"/>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Fecha Petición</th>
+          <th>Prueba</th>
+          <th>Comentario</th>
+          <th>Ver peticion</th>
+          <th>Solicitante</th>
+          <th>Fecha Resultado</th>
+          <th>Resultado</th>
+          <th>Acceso web</th>
+          <th>Accion</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-prueba>
+        <tr>
+          <td>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Fecha Petición:</span>
+              <span>{{prueba.fechaPeticion}}</span>
+            </div>
+          </td>
+          <td>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Prueba:</span>
+              <span> {{prueba.prueba}}</span>
+            </div>
+          </td>
+          <td>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Comentario:</span>
+              <span>{{prueba.comentario}}</span>
+            </div>
+          </td>
+          <td>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Ver petición:</span>
+              <p-button icon="pi pi-book"
+                        styleClass="p-button-sm {{prueba.verPeticion?'p-button-warning':''}}"></p-button>
+            </div>
+          </td>
+          <td>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Solicitante:</span>
+              <span> {{prueba.solicitante}}</span>
+            </div>
+          </td>
+          <td>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Fecha Resultado:</span>
+              <span>{{prueba.fechaResultado}}</span>
+            </div>
+          </td>
+          <td>
+            <div class="flex flex-column">
+              <span class="p-column-title font-bold lg:hidden">Acceso web:</span>
+              <span></span>
+            </div>
+          </td>
+          <td>
+          </td>
+          <td>
+            <div class="flex justify-content-center align-items-center w-full">
+              <i class="pi pi-pencil text-primary text-xl font-bold cursor-pointer" (click)="menu.toggle($event)"></i>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-panel>
+
+  <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
+
+</div>

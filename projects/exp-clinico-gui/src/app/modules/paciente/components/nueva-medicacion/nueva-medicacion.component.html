@@ -14,8 +14,8 @@
       <p-accordionTab header="BALON DILATADOR URETERAL 4MX 4 EQD0404">
         <div class="formgrid grid">
           <div class="field col-12 lg:col-2">
-            <label for="nombre" class="font-bold text-sm req">Vía:</label>
-            <input id="nombre" type="text" pInputText class="p-inputtext-sm w-full">
+            <label class="font-bold text-sm req">Vía:</label>
+            <input type="text" pInputText class="p-inputtext-sm w-full">
           </div>
           <div class="col-12 lg:col-2 flex">
             <div class="flex-grow-1 field">
@@ -177,7 +177,7 @@
         <div class="formgrid grid">
           <div class="field col-12 lg:col-2">
             <label for="nombre" class="font-bold text-sm req">Vía:</label>
-            <input id="nombre" type="text" pInputText class="p-inputtext-sm w-full">
+            <input type="text" pInputText class="p-inputtext-sm w-full">
           </div>
           <div class="col-12 lg:col-2 flex">
             <div class="flex-grow-1 field">
@@ -259,7 +259,8 @@
   </p-panel>
 
   <div class="flex flex justify-content-end align-items-center my-4">
-    <p-button label="Cancelar" styleClass="p-button-sm p-button-secondary mr-2" [routerLink]="['../medicacion']"></p-button>
+    <p-button label="Cancelar" styleClass="p-button-sm p-button-secondary mr-2"
+              [routerLink]="['../medicacion']"></p-button>
     <p-button label="Guardar" styleClass="p-button-sm p-button-primary"></p-button>
   </div>
 </div>

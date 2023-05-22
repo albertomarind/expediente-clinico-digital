@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from "@angular/forms";
 import { AvatarModule } from "primeng/avatar";
 import { BreadcrumbModule } from "primeng/breadcrumb";
 import { ButtonModule } from "primeng/button";
 import { CalendarModule } from "primeng/calendar";
 import { CheckboxModule } from "primeng/checkbox";
+import { ChipModule } from "primeng/chip";
 import { DialogModule } from "primeng/dialog";
 import { DropdownModule } from "primeng/dropdown";
 import { InputTextModule } from "primeng/inputtext";
 import { PanelModule } from "primeng/panel";
 import { PanelMenuModule } from "primeng/panelmenu";
+import { RadioButtonModule } from "primeng/radiobutton";
 import { RippleModule } from "primeng/ripple";
 import { SidebarModule } from "primeng/sidebar";
 import { TableModule } from "primeng/table";
@@ -28,6 +31,9 @@ import { TieredMenuModule } from 'primeng/tieredmenu';
 import { NuevaMedicacionComponent } from './components/nueva-medicacion/nueva-medicacion.component';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { PickListModule } from 'primeng/picklist';
+import { PruebasDiagnosticasComponent } from './components/pruebas-diagnosticas/pruebas-diagnosticas.component';
+import { LaboratorioComponent } from 'projects/exp-clinico-gui/src/app/modules/paciente/components/laboratorio/laboratorio.component';
+import { ImagenComponent } from './components/imagen/imagen.component';
 
 @NgModule({
   declarations: [
@@ -40,12 +46,16 @@ import { PickListModule } from 'primeng/picklist';
     PacienteDetallesComponent,
     MenuPacienteMobileComponent,
     MedicacionComponent,
-    NuevaMedicacionComponent
+    NuevaMedicacionComponent,
+    PruebasDiagnosticasComponent,
+    LaboratorioComponent,
+    ImagenComponent
   ],
   imports: [
     CommonModule,
     ButtonModule,
     PacienteRoutingModule,
+    FormsModule,
     RippleModule,
     InputTextModule,
     PanelModule,
@@ -61,7 +71,9 @@ import { PickListModule } from 'primeng/picklist';
     PickListModule,
     DropdownModule,
     CalendarModule,
-    CheckboxModule
+    CheckboxModule,
+    RadioButtonModule,
+    ChipModule
   ]
 })
 export class PacienteModule {

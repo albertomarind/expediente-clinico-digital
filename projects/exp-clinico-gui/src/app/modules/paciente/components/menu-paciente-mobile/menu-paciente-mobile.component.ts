@@ -37,7 +37,11 @@ export class MenuPacienteMobileComponent implements OnInit {
         }
       },
       {
-        label: 'Historia Clínica'
+        label: 'Pruebas diagnósticas',
+        routerLink: ["pruebas-diagnosticas"],
+        command: () => {
+          this.display = false;
+        }
       },
       {
         label: 'Laboratorio'
