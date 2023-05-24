@@ -44,16 +44,8 @@ export class MenuPacienteMobileComponent implements OnInit {
         }
       },
       {
-        label: 'Laboratorio'
-      },
-      {
-        label: 'Imageneología'
-      },
-      {
-        label: 'Nueva receta'
-      },
-      {
-        label: 'Programar cirugía'
+        label: 'Programar cirugía',
+        routerLink: ["cirugias"],
       }
     ];
   }

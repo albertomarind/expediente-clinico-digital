@@ -1,0 +1,327 @@
+<div class="p-3">
+  <div class="flex justify-content-between align-items-center">
+    <p-button label="Cancelar" styleClass="p-button-sm p-button-secondary"
+              [routerLink]="['../']"></p-button>
+    <h2 class="text-xl text-primary font-bold text-center">Solicitud de cirugía</h2>
+    <span></span>
+  </div>
+  <p-panel class="block mt-3" header="Datos solicitud">
+    <div class="formgrid grid mt-2">
+      <div class="field col-12 lg:col-6">
+        <label class="font-bold text-sm">Especialidad:</label>
+        <p-dropdown [options]="especialidades" [(ngModel)]="selectedEspecialidad" optionLabel="name" [filter]="true"
+                    filterBy="name"
+                    [showClear]="true" placeholder="Seleccionar" styleClass="w-full p-inputtext-sm">
+          <ng-template pTemplate="selectedItem">
+            <div *ngIf="selectedEspecialidad">
+              <span>{{selectedEspecialidad.name}}</span>
+            </div>
+          </ng-template>
+          <ng-template let-especialidad pTemplate="item">
+            <div>
+              <span>{{especialidad.name}}</span>
+            </div>
+          </ng-template>
+        </p-dropdown>
+      </div>
+
+      <div class="field col-12 lg:col-6">
+        <label class="font-bold text-sm req block">Doctor:</label>
+        <div class="flex">
+          <input type="text" [readOnly]="true" pInputText placeholder="Doctor" class="p-inputtext-sm w-full">
+          <p-button label="Seleccinar" styleClass="p-button-sm" (click)="mostrarModalDoctor = true;"></p-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="formgrid grid mt-2">
+      <div class="field col-12 lg:col-6">
+        <label class="font-bold text-sm req block">Cirujano:</label>
+        <div class="flex">
+          <input type="text" [readOnly]="true" pInputText placeholder="Cirujano" class="p-inputtext-sm w-full">
+          <p-button label="Seleccinar" styleClass="p-button-sm" (click)="mostrarModalCirujano = true;"></p-button>
+        </div>
+      </div>
+      <div class="field col-12 lg:col-6">
+        <label class="font-bold text-sm">Quirófano:</label>
+        <p-dropdown [options]="quirofanos" [(ngModel)]="quirofanoSeleccionado" optionLabel="name" [filter]="true"
+                    filterBy="name"
+                    [showClear]="true" placeholder="Seleccionar" styleClass="w-full p-inputtext-sm">
+          <ng-template pTemplate="selectedItem">
+            <div *ngIf="quirofanoSeleccionado">
+              <span>{{quirofanoSeleccionado.name}}</span>
+            </div>
+          </ng-template>
+          <ng-template let-tipoAdmision pTemplate="item">
+            <div>
+              <span>{{tipoAdmision.name}}</span>
+            </div>
+          </ng-template>
+        </p-dropdown>
+      </div>
+
+    </div>
+    <div class="formgrid grid mt-2">
+      <div class="field col-12 lg:col-6">
+        <label class="font-bold text-sm">Fecha y hora de la cirugía:</label>
+        <p-calendar styleClass="w-full" [showIcon]="true" [showTime]="true" [readonlyInput]="true"></p-calendar>
+      </div>
+    </div>
+
+    <div class="formgrid grid mt-2">
+      <div class="field col-12 lg:col-6">
+        <label class="font-bold text-sm">Tipo de adminisión:</label>
+        <p-dropdown [options]="tiposAdmision" [(ngModel)]="tipoAdmisionSeleccionada" optionLabel="name" [filter]="true"
+                    filterBy="name"
+                    [showClear]="true" placeholder="Seleccionar" styleClass="w-full p-inputtext-sm">
+          <ng-template pTemplate="selectedItem">
+            <div *ngIf="tipoAdmisionSeleccionada">
+              <span>{{tipoAdmisionSeleccionada.name}}</span>
+            </div>
+          </ng-template>
+          <ng-template let-tipoAdmision pTemplate="item">
+            <div>
+              <span>{{tipoAdmision.name}}</span>
+            </div>
+          </ng-template>
+        </p-dropdown>
+      </div>
+      <div class="field col-12 lg:col-6">
+        <label class="font-bold text-sm">Observaciones/Req. espec. :</label>
+        <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+      </div>
+    </div>
+    <div class="formgrid grid">
+      <div class="field col-12 lg:col-6">
+        <label class="font-bold text-sm req block">Prioridad:</label>
+        <div class="flex lg:justify-content-around md:align-items-center flex-column lg:flex-row mt-3">
+          <p-radioButton name="groupname" value="1" label="Requiere UCI" [(ngModel)]="value4"></p-radioButton>
+          <p-radioButton name="groupname" value="2" label="Requiere sangre" [(ngModel)]="value4"
+                         class="inline-block mt-4 lg:mt-0"></p-radioButton>
+          <p-radioButton name="groupname" value="3" label="Crear nueva admisión planificada" [(ngModel)]="value4"
+                         class="inline-block mt-4 lg:mt-0"></p-radioButton>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid mb-2 lg:mb-0 lg:mt-8">
+      <div class="col-12 lg:col-6 flex">
+        <input type="text" pInputText placeholder="Buscar" class="p-inputtext-sm flex-grow-1">
+        <div class="flex-grow-1">
+          <p-dropdown [options]="elementos" [(ngModel)]="elementoSeleccionado" optionLabel="name"
+                      placeholder="Seleccionar" styleClass="p-inputtext-sm w-full">
+          </p-dropdown>
+        </div>
+        <p-button label="Buscar" class="inline-block lg:ml-4 lg:mr-5" styleClass="p-button-sm "></p-button>
+      </div>
+    </div>
+    <p-pickList [source]="sourceItems" [target]="targetItems" sourceHeader="Catálogo cirugías"
+                targetHeader="Elementos seleccionados"
+                [dragdrop]="true" (onSourceSelect)="onSelect($event)"
+                [responsive]="true" [sourceStyle]="{'height':'30rem','padding':0}" [targetStyle]="{'height':'30rem'}"
+                filterBy="name" [showSourceControls]="false" [showTargetControls]="false" [showSourceFilter]="false"
+                [showTargetFilter]="false">
+      <ng-template let-item pTemplate="item">
+        <div class="item border-1 border-black-alpha-10 p-2">
+          <div class="grid">
+            <div class="col-12 lg:col-8">
+              <span class="font-bold text-base block">Descripción:</span>
+              <span class="text-base block">{{item.descripcion}}</span>
+              <span class="font-bold text-base block">Código:</span>
+              <span class="text-base block">{{item.codigo}}</span>
+            </div>
+            <div class="col-12 lg:col-4 flex justify-content-center align-items-center">
+              <button pButton (click)="agregarFavorito($event)" pRipple type="button" icon="pi pi-star"
+                      class="p-button-rounded p-button-success p-button-outlined z-1"></button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-pickList>
+
+  </p-panel>
+  <div class="mt-3 text-center">
+    <p-button label="Cancelar" class="m-2 inline-block " styleClass="p-button-sm p-button-secondary"
+              [routerLink]="['../']"></p-button>
+    <p-button label="Aceptar" class="m-2 inline-block " styleClass="p-button-sm p-button-primary "></p-button>
+  </div>
+</div>
+
+
+<p-dialog header="Selección de cirujano" [(visible)]="mostrarModalCirujano" [style]="{width: '95vw'}" [modal]="true"
+          [resizable]="false" [draggable]="false"
+          [closable]="false">
+  <ng-template pTemplate="content">
+    <div class="formgrid grid">
+      <div class="field col-12 lg:col-3">
+        <label class="font-bold text-sm req">Uid externo:</label>
+        <input type="text" pInputText class="p-inputtext-sm w-full">
+      </div>
+      <div class="field col-12 lg:col-3">
+        <label class="font-bold text-sm req">Nombre:</label>
+        <input type="text" pInputText class="p-inputtext-sm w-full">
+      </div>
+      <div class="field col-12 lg:col-6">
+        <label class="font-bold text-sm">Especialidad:</label>
+        <div class="flex">
+          <p-dropdown class="flex-grow-1" [options]="especialidades" [(ngModel)]="selectedEspecialidad" optionLabel="name" [filter]="true"
+                      filterBy="name"
+                      [showClear]="true" placeholder="Seleccionar" styleClass="w-full p-inputtext-sm ">
+            <ng-template pTemplate="selectedItem">
+              <div *ngIf="selectedEspecialidad">
+                <span>{{selectedEspecialidad.name}}</span>
+              </div>
+            </ng-template>
+            <ng-template let-especialidad pTemplate="item">
+              <div>
+                <span>{{especialidad.name}}</span>
+              </div>
+            </ng-template>
+          </p-dropdown>
+          <p-button label="Búsqueda" class="inline-block" styleClass="p-button-sm p-button-primary"></p-button>
+        </div>
+      </div>
+
+    </div>
+    <p-table class="mt-2 block" [value]="[]" responsiveLayout="stack" [breakpoint]="'960px'"
+             [tableStyle]="{'min-width': '10rem'}">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Uid externo</th>
+          <th>Nombre</th>
+          <th>Firma</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-patient>
+<!--        <tr>-->
+<!--          <td>-->
+<!--            <span class="p-column-title font-bold">Nombre:</span>-->
+<!--            <span>{{patient.name}}</span>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <span class="p-column-title font-bold">Fecha nacimiento:</span>-->
+<!--            <span> {{patient.birthdate}}</span>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <span class="p-column-title font-bold">Edad:</span>-->
+<!--            <span>{{patient.age}}</span>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <span class="p-column-title font-bold">No. Historia:</span>-->
+<!--            <span>{{patient.history}}</span>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <span class="p-column-title font-bold">Habitación:</span>-->
+<!--            <span> {{patient.room}}</span>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <span class="p-column-title font-bold">Género:</span>-->
+<!--            <span>{{patient.gender}}</span>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--            <div class="flex justify-content-center align-items-center w-full">-->
+<!--              <button [routerLink]="[17,'resumen']" pButton pRipple type="button" icon="pi pi-eye"-->
+<!--                      class="p-button-rounded p-button-outlined"></button>-->
+<!--            </div>-->
+<!--          </td>-->
+<!--        </tr>-->
+      </ng-template>
+    </p-table>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <p-button (click)="mostrarModalCirujano=false" label="Cancelar"
+              styleClass="p-button-sm p-button-secondary mr-2"></p-button>
+    <p-button (click)="mostrarModalCirujano=false" label="Aceptar" styleClass="p-button-sm p-button-primary"></p-button>
+  </ng-template>
+</p-dialog>
+
+
+
+<p-dialog header="Selección de doctor" [(visible)]="mostrarModalDoctor" [style]="{width: '95vw'}" [modal]="true"
+          [resizable]="false" [draggable]="false"
+          [closable]="false">
+  <ng-template pTemplate="content">
+    <div class="formgrid grid">
+      <div class="field col-12 lg:col-3">
+        <label class="font-bold text-sm req">Uid externo:</label>
+        <input type="text" pInputText class="p-inputtext-sm w-full">
+      </div>
+      <div class="field col-12 lg:col-3">
+        <label class="font-bold text-sm req">Nombre:</label>
+        <input type="text" pInputText class="p-inputtext-sm w-full">
+      </div>
+      <div class="field col-12 lg:col-6">
+        <label class="font-bold text-sm">Especialidad:</label>
+        <div class="flex">
+          <p-dropdown class="flex-grow-1" [options]="especialidades" [(ngModel)]="selectedEspecialidad" optionLabel="name" [filter]="true"
+                      filterBy="name"
+                      [showClear]="true" placeholder="Seleccionar" styleClass="w-full p-inputtext-sm ">
+            <ng-template pTemplate="selectedItem">
+              <div *ngIf="selectedEspecialidad">
+                <span>{{selectedEspecialidad.name}}</span>
+              </div>
+            </ng-template>
+            <ng-template let-especialidad pTemplate="item">
+              <div>
+                <span>{{especialidad.name}}</span>
+              </div>
+            </ng-template>
+          </p-dropdown>
+          <p-button label="Búsqueda" class="inline-block" styleClass="p-button-sm p-button-primary"></p-button>
+        </div>
+      </div>
+
+    </div>
+    <p-table class="mt-2 block" [value]="[]" responsiveLayout="stack" [breakpoint]="'960px'"
+             [tableStyle]="{'min-width': '10rem'}">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Uid externo</th>
+          <th>Nombre</th>
+          <th>Firma</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-patient>
+        <!--        <tr>-->
+        <!--          <td>-->
+        <!--            <span class="p-column-title font-bold">Nombre:</span>-->
+        <!--            <span>{{patient.name}}</span>-->
+        <!--          </td>-->
+        <!--          <td>-->
+        <!--            <span class="p-column-title font-bold">Fecha nacimiento:</span>-->
+        <!--            <span> {{patient.birthdate}}</span>-->
+        <!--          </td>-->
+        <!--          <td>-->
+        <!--            <span class="p-column-title font-bold">Edad:</span>-->
+        <!--            <span>{{patient.age}}</span>-->
+        <!--          </td>-->
+        <!--          <td>-->
+        <!--            <span class="p-column-title font-bold">No. Historia:</span>-->
+        <!--            <span>{{patient.history}}</span>-->
+        <!--          </td>-->
+        <!--          <td>-->
+        <!--            <span class="p-column-title font-bold">Habitación:</span>-->
+        <!--            <span> {{patient.room}}</span>-->
+        <!--          </td>-->
+        <!--          <td>-->
+        <!--            <span class="p-column-title font-bold">Género:</span>-->
+        <!--            <span>{{patient.gender}}</span>-->
+        <!--          </td>-->
+        <!--          <td>-->
+        <!--            <div class="flex justify-content-center align-items-center w-full">-->
+        <!--              <button [routerLink]="[17,'resumen']" pButton pRipple type="button" icon="pi pi-eye"-->
+        <!--                      class="p-button-rounded p-button-outlined"></button>-->
+        <!--            </div>-->
+        <!--          </td>-->
+        <!--        </tr>-->
+      </ng-template>
+    </p-table>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <p-button (click)="mostrarModalDoctor=false" label="Cancelar"
+              styleClass="p-button-sm p-button-secondary mr-2"></p-button>
+    <p-button (click)="mostrarModalDoctor=false" label="Aceptar" styleClass="p-button-sm p-button-primary"></p-button>
+  </ng-template>
+</p-dialog>
+
+
