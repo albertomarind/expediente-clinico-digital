@@ -7,6 +7,7 @@ import { ButtonModule } from "primeng/button";
 import { CalendarModule } from "primeng/calendar";
 import { CheckboxModule } from "primeng/checkbox";
 import { ChipModule } from "primeng/chip";
+import { DialogModule } from "primeng/dialog";
 import { DropdownModule } from "primeng/dropdown";
 import { InputTextModule } from "primeng/inputtext";
 import { InputTextareaModule } from "primeng/inputtextarea";
@@ -45,7 +46,8 @@ import { ListaCirugiasComponent } from './components/lista-cirugias/lista-cirugi
     DropdownModule,
     InputTextareaModule,
     PickListModule,
-    RadioButtonModule
+    RadioButtonModule,
+    DialogModule
   ]
 })
 export class CirugiasModule { }
