@@ -39,8 +39,13 @@ const routes: Routes = [
       {
         path: 'imagen', component: ImagenComponent
       },
+      {
+        path: 'cirugias',
+        loadChildren: () => import('projects/exp-clinico-gui/src/app/modules/paciente/pages/cirugias/cirugias.module').then(m => m.CirugiasModule)
+      }
     ]
-  }
+  },
+
 ];
 
 @NgModule({
