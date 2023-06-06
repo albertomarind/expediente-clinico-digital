@@ -15,16 +15,16 @@ export class MenuPacienteMobileComponent implements OnInit {
 
   ngOnInit() {
     this.items = [
+      // {
+      //   label: 'Resumen',
+      //   routerLink: ["resumen"],
+      //   command: () => {
+      //     this.display = false;
+      //   }
+      // },
       {
-        label: 'Resumen',
-        routerLink: ["resumen"],
-        command: () => {
-          this.display = false;
-        }
-      },
-      {
-        label: 'Notas de evolución',
-        routerLink: ["nota-evolucion"],
+        label: 'Episodio actual',
+        routerLink: ["episodio-actual"],
         command: () => {
           this.display = false;
         }
