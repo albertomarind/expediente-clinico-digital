@@ -23,7 +23,7 @@ import { PacienteRoutingModule } from 'projects/exp-clinico-gui/src/app/modules/
 import { PacienteComponent } from 'projects/exp-clinico-gui/src/app/modules/paciente/components/paciente/paciente.component';
 import { ResumenComponent } from './components/resumen/resumen.component';
 import { FactoresRiesgoComponent } from './components/factores-riesgo/factores-riesgo.component';
-import { NotaEvolucionComponent } from 'projects/exp-clinico-gui/src/app/modules/paciente/components/nota-evolucion/nota-evolucion.component';
+import { ListaNotasComponent } from 'projects/exp-clinico-gui/src/app/modules/paciente/pages/episodio-actual/components/lista-notas/lista-notas.component';
 import { MenuPacienteMobileComponent } from './components/menu-paciente-mobile/menu-paciente-mobile.component';
 import { MedicacionComponent } from './components/medicacion/medicacion.component';
 import { AccordionModule } from 'primeng/accordion';
@@ -42,7 +42,7 @@ import { ImagenComponent } from './components/imagen/imagen.component';
     MenuPacienteComponent,
     ResumenComponent,
     FactoresRiesgoComponent,
-    NotaEvolucionComponent,
+    ListaNotasComponent,
     PacienteDetallesComponent,
     MenuPacienteMobileComponent,
     MedicacionComponent,

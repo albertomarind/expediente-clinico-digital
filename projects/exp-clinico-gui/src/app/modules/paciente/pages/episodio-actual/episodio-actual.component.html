@@ -1,0 +1,19 @@
+<div class="header p-3 lg:hidden">
+  <p-button (click)="display = true" label="Seleccionar tipo de nota"
+            styleClass="p-button-sm"></p-button>
+</div>
+<div class="grid grid-nogutter">
+  <div class="hidden lg:col-3 lg:block xl:col-2">
+    <p-panelMenu [model]="items" [style]="{'width':'100%'}" styleClass="mt-1"></p-panelMenu>
+  </div>
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+<p-sidebar [(visible)]="display" position="right">
+  <p-panelMenu [model]="items" [style]="{'width':'100%'}" styleClass="mt-1"></p-panelMenu>
+</p-sidebar>
+
+
