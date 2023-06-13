@@ -20,7 +20,11 @@ export class EpisodioActualComponent implements OnInit {
         label: 'Historia Clínica',
         items: [
           {
-            label: 'Historia Clínica Pediátrica'
+            label: 'Historia Clínica Pediátrica',
+            routerLink: ["historia-clinica-pediatrica"],
+            command: () => {
+              this.display = false;
+            }
           },
           {
             label: 'Historia Clínica General Adultos'
@@ -206,7 +210,11 @@ export class EpisodioActualComponent implements OnInit {
         }
       },
       {
-        label: 'Caso Médico Legal'
+        label: 'Caso Médico Legal',
+        routerLink: ["caso-medico-legal"],
+        command: () => {
+          this.display = false;
+        }
       },
       {
         label: 'Evaluación de Riesgos',

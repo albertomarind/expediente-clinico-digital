@@ -1,0 +1,28 @@
+.table-styles {
+  border-collapse: collapse;
+  min-width: 1000px;
+
+  thead tr {
+    background-color: #F8F9FA;
+
+    th {
+      padding: 5px;
+    }
+  }
+
+  tbody {
+    td {
+      padding: 5px;
+    }
+  }
+
+  tfoot{
+    td {
+      padding: 5px;
+    }
+  }
+
+  th, td {
+    border: 1px solid lightgray;
+  }
+}

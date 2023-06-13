@@ -55,8 +55,12 @@ img {
   }
 }
 
-.no-resize{
-  resize:none;
+.no-resize {
+  resize: none;
+}
+
+hr.separator {
+  border: .5px solid #cecece;
 }
 
 .req {
@@ -64,6 +68,6 @@ img {
     content: '*';
     color: var(--primary-color);
     font-weight: bold;
-    font-size:16px;
+    font-size: 16px;
   }
 }
