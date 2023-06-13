@@ -1,0 +1,119 @@
+<div class="px-3 py-4">
+  <div class="flex justify-content-center align-items-center mb-2">
+    <h2 class="text-xl text-primary font-bold text-center">Nota de interconsulta</h2>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-12">
+      <label class="font-bold text-sm block">Diagnóstico:</label>
+      <input type="text" pInputText class="p-inputtext-sm w-full">
+    </div>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-12">
+      <label class="font-bold text-sm block">Motivo de interconsulta:</label>
+      <input type="text" pInputText class="p-inputtext-sm w-full">
+    </div>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-12">
+      <label class="font-bold text-sm block">Especialidad:</label>
+      <input type="text" pInputText class="p-inputtext-sm w-full">
+    </div>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-12">
+      <label class="font-bold text-sm block">Médico a quien se le solicita la interconsulta:</label>
+      <input type="text" pInputText class="p-inputtext-sm w-full">
+    </div>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-4">
+      <label class="font-bold text-sm block">Fecha y hora de la atención de la interconsulta:</label>
+      <p-calendar styleClass="w-full" [showIcon]="true" [readonlyInput]="true"></p-calendar>
+    </div>
+  </div>
+  <p-panel class="block mt-2" header="Valoración">
+    <div class="formgrid grid mt-2">
+      <div class="field col-12 lg:col-2">
+        <label class="font-bold text-sm block">TA (mmHg):</label>
+        <input type="text" pInputText class="p-inputtext-sm w-full">
+      </div>
+      <div class="field col-12 lg:col-2">
+        <label class="font-bold text-sm block">FC (lpm):</label>
+        <input type="text" pInputText class="p-inputtext-sm w-full">
+      </div>
+      <div class="field col-12 lg:col-2">
+        <label class="font-bold text-sm block">FR (lpm):</label>
+        <input type="text" pInputText class="p-inputtext-sm w-full">
+      </div>
+      <div class="field col-12 lg:col-2">
+        <label class="font-bold text-sm block">Temperatura (°C):</label>
+        <input type="text" pInputText class="p-inputtext-sm w-full">
+      </div>
+      <div class="field col-12 lg:col-2">
+        <label class="font-bold text-sm block">Pulso:</label>
+        <input type="text" pInputText class="p-inputtext-sm w-full">
+      </div>
+    </div>
+    <div class="formgrid grid mt-2">
+      <div class="field col-12 lg:col-12">
+        <label class="font-bold text-sm block">Valoración:</label>
+        <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+      </div>
+    </div>
+  </p-panel>
+  <div class="formgrid grid mt-4">
+    <div class="field col-12 lg:col-12">
+      <label class="font-bold text-sm block">Resultado de estudios de los servicios auxiliares de diagnóstico y tratamiento solicitados previamente:</label>
+      <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+    </div>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-12">
+      <label class="font-bold text-sm block">Resumen de interrogatorio:</label>
+      <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+    </div>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-12">
+      <label class="font-bold text-sm block">Diagnóstico:</label>
+      <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+    </div>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-12">
+      <label class="font-bold text-sm block">Estudios propuestos:</label>
+      <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+    </div>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-12">
+      <label class="font-bold text-sm block">Plan de manejo propuesto:</label>
+      <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+    </div>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-12">
+      <label class="font-bold text-sm block">Pronóstico:</label>
+      <input type="text" pInputText class="p-inputtext-sm w-full">
+    </div>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-6">
+      <label class="font-bold text-sm block">Nombre del médico interconsultante:</label>
+      <input type="text" pInputText class="p-inputtext-sm w-full">
+    </div>
+    <div class="field col-12 lg:col-6">
+      <label class="font-bold text-sm block">Cédula Profesional de especialidad:</label>
+      <input type="text" pInputText class="p-inputtext-sm w-full">
+    </div>
+  </div>
+  <div class="mt-3 flex justify-content-end align-items-center">
+    <p-button label="Cancelar" class="m-2 inline-block " styleClass="p-button-sm p-button-secondary"
+              [routerLink]="['../']"></p-button>
+    <p-button label="Imprimir" class="m-2 inline-block " styleClass="p-button-sm p-button-primary"
+              [routerLink]="['../']"></p-button>
+    <p-button label="Salvar y Firmar" class="m-2 inline-block " [routerLink]="['../']"
+              styleClass="p-button-sm p-button-primary"></p-button>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from "primeng/api";
+import { NotaEvolucionUtiUccComponent } from "projects/exp-clinico-gui/src/app/modules/paciente/pages/episodio-actual/components/nota-evolucion-uti-ucc/nota-evolucion-uti-ucc.component";
 
 @Component({
   selector: 'app-episodio-actual',
@@ -45,7 +46,11 @@ export class EpisodioActualComponent implements OnInit {
         label: 'Informes',
         items: [
           {
-            label: 'Curso clínico'
+            label: 'Curso clínico',
+            routerLink: ["curso-clinico"],
+            command: () => {
+              this.display = false;
+            }
           },
           {
             label: 'Crear receta'
@@ -155,19 +160,39 @@ export class EpisodioActualComponent implements OnInit {
         label: 'Notas',
         items: [
           {
-            label: 'Oncología'
+            label: 'Oncología',
+            routerLink: ["oncologia"],
+            command: () => {
+              this.display = false;
+            }
           },
           {
-            label: 'Hemodiálisis'
+            label: 'Hemodiálisis',
+            routerLink: ["hemodialisis"],
+            command: () => {
+              this.display = false;
+            }
           },
           {
-            label: 'Nota de Interconsulta'
+            label: 'Nota de Interconsulta',
+            routerLink: ["nota-de-interconsulta"],
+            command: () => {
+              this.display = false;
+            }
           },
           {
-            label: 'Nota de Evolución de UTI-UCC'
+            label: 'Nota de Evolución de UTI-UCC',
+            routerLink: ["nota-de-evolucion-de-uti-ucc"],
+            command: () => {
+              this.display = false;
+            }
           },
           {
-            label: 'Historia Clínica - Torre (TC)'
+            label: 'Historia Clínica - Torre (TC)',
+            routerLink: ["historia-clinica-torre-tc"],
+            command: () => {
+              this.display = false;
+            }
           },
           {
             label: 'Nota de Evolución - Torre (TC)'

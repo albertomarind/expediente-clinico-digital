@@ -1,0 +1,96 @@
+<div class="px-3 py-4">
+  <div class="flex justify-content-center align-items-center">
+    <h2 class="text-xl text-primary font-bold text-center">Historia Clínica - Torre (TC)</h2>
+  </div>
+  <div class="formgrid grid mt-2">
+    <div class="field col-12 lg:col-12">
+      <label class="font-bold text-sm block">Datos demográficos:</label>
+      <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+    </div>
+  </div>
+  <p-accordion class="block mt-3">
+    <p-accordionTab class="block mt-3" header="Antecedentes">
+      <div class="formgrid grid mt-2">
+        <div class="field col-12 lg:col-12">
+          <label class="font-bold text-sm block">Antecedentes heredofamiliares:</label>
+          <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+        </div>
+      </div>
+      <div class="formgrid grid mt-2">
+        <div class="field col-12 lg:col-12">
+          <label class="font-bold text-sm block">Antecedentes personales patológicos:</label>
+          <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+        </div>
+      </div>
+      <div class="formgrid grid mt-2">
+        <div class="field col-12 lg:col-12">
+          <label class="font-bold text-sm block">Antecedentes personales no patológicos:</label>
+          <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+        </div>
+      </div>
+    </p-accordionTab>
+
+    <p-accordionTab class="block mt-3" header="Interrogatorio">
+      <div class="formgrid grid mt-2">
+        <div class="field col-12 lg:col-12">
+          <label class="font-bold text-sm block">Interrogatorio por aparatos y sistemas:</label>
+          <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+        </div>
+      </div>
+    </p-accordionTab>
+
+    <p-accordionTab class="block mt-3" header="Padecimiento Actual y Exploración Física">
+      <div class="formgrid grid mt-2">
+        <div class="field col-12 lg:col-12">
+          <label class="font-bold text-sm block">Padecimiento actual:</label>
+          <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+        </div>
+      </div>
+      <div class="formgrid grid mt-2">
+        <div class="field col-12 lg:col-12">
+          <label class="font-bold text-sm block">Exploración física:</label>
+          <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+        </div>
+      </div>
+    </p-accordionTab>
+
+    <p-accordionTab class="block mt-3" header="Resultados de Exámenes de Laboratorio y/o Gabinete">
+      <div class="formgrid grid mt-2">
+        <div class="field col-12 lg:col-12">
+          <label class="font-bold text-sm block">Resultados previos y actuales:</label>
+          <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+        </div>
+      </div>
+    </p-accordionTab>
+
+    <p-accordionTab class="block mt-3" header="Diagnóstico, Pronóstico e Indicaciones Terapéuticas">
+      <div class="formgrid grid mt-2">
+        <div class="field col-12 lg:col-12">
+          <label class="font-bold text-sm block">Diagnóstico:</label>
+          <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+        </div>
+      </div>
+      <div class="formgrid grid mt-2">
+        <div class="field col-12 lg:col-12">
+          <label class="font-bold text-sm block">Pronóstico:</label>
+          <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+        </div>
+      </div>
+      <div class="formgrid grid mt-2">
+        <div class="field col-12 lg:col-12">
+          <label class="font-bold text-sm block">Indicación terapéutica:</label>
+          <textarea pInputTextarea class="p-inputtext-sm w-full no-resize"></textarea>
+        </div>
+      </div>
+    </p-accordionTab>
+  </p-accordion>
+
+  <div class="mt-3 flex justify-content-end align-items-center">
+    <p-button label="Cancelar" class="m-2 inline-block " styleClass="p-button-sm p-button-secondary"
+              [routerLink]="['../']"></p-button>
+    <p-button label="Imprimir" class="m-2 inline-block " styleClass="p-button-sm p-button-primary"
+              [routerLink]="['../']"></p-button>
+    <p-button label="Salvar y Firmar" class="m-2 inline-block " [routerLink]="['../']"
+              styleClass="p-button-sm p-button-primary"></p-button>
+  </div>
+</div>
